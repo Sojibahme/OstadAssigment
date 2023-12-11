@@ -1,0 +1,112 @@
+abstract class Role{
+ void displayRole();
+}
+class person implements Role{
+ String name;
+ int age;
+ String address;
+ person(this.name,this.age,this.address){
+ name =name;
+ age=age;
+ address=address;
+ }
+ @override
+ void displayRole() {
+ }
+}
+class Student extends person
+{
+ int studentID;
+ String grade;
+ List<double>courseScores=[90,85,82];
+ Student(super.name, super.age, super.address,this.studentID,this.grade)
+ {
+ name=name;
+ age=age;
+ address=address;
+ studentID=studentID;
+ grade=grade;
+ }
+ @override
+ void displayRole() {
+ print("Student Information :");
+ print("Role:Student");
+ }
+ average()
+ {
+ double average=0;
+ int sum=0;
+ for(int i=0;i<courseScores.length;i++)
+ {
+ sum= (sum + courseScores[i]) as int;
+ }
+ average=(sum/3);
+ print("Average Score:$average");
+ }
+void displayinformation(
+ )
+{
+ print("Name:$name");
+ print("Age:$age");
+ print ("Adress:$address");
+}
+}
+class Teacher extends person
+{
+ int teacherId;
+ List<String> courseTaught=['-Math','-English','-Bangla'];
+ Teacher(super.name, super.age, super.address,this.teacherId)
+ {
+ name=name;
+ age=age;
+ address=address;
+ }
+ @override
+ void displayRole() {
+ print("Teacher Information:");
+ print("Role:Teacher ");
+ }
+ course(){
+ print("Courses Taught:");
+ 
+ for(int i=0;i<courseTaught.length;i++)
+ {
+ print(courseTaught[i]);
+ }
+ }
+ void displayteacher()
+ {
+ print("Name:$name");
+ print("Age:$age");
+ print("Address:$address");
+ }
+}
+void main()
+{
+ Student obj1=Student('John Doe', 20, '123 Main St', 9474747, 'A');
+ obj1.displayRole();
+ obj1.displayinformation();
+ obj1.average();
+ Teacher obj2=Teacher('Mrs. Smith', 35, '456 Oak St', 1612);
+ obj2.displayRole();
+ obj2.displayteacher();
+ obj2.course();
+ 
+}
+Output
+Console
+Student Information :
+Role:Student
+Name:John Doe
+Age:20
+Adress:123 Main St
+Average Score:85.66666666666667
+Teacher Information:
+Role:Teacher 
+Name:Mrs. Smith
+Age:35
+Address:456 Oak St
+Courses Taught:
+-Math
+-English
+-Bang
