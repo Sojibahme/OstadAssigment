@@ -93,20 +93,4 @@ void main()
  obj2.course();
  
 }
-Output
-Console
-Student Information :
-Role:Student
-Name:John Doe
-Age:20
-Adress:123 Main St
-Average Score:85.66666666666667
-Teacher Information:
-Role:Teacher 
-Name:Mrs. Smith
-Age:35
-Address:456 Oak St
-Courses Taught:
--Math
--English
--Bang
+
